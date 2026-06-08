@@ -53,7 +53,6 @@ int Train::getLength() {
         memorizedLen = 0;
     } else {
         return memorizedLen + 1;
-        break;
       }
     }
   }

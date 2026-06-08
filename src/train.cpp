@@ -1,6 +1,16 @@
 // Copyright 2021 NNTU-CS
 #include "train.h"
 Train::Train() : countOp(0), first(nullptr) {}
+Train::~Train() {
+  if (first == nullptr) return;
+  Car* current = first;
+  Car* next;
+  do {
+    next = current->next;
+    delete current;
+    current = next;
+  } while (current != first);
+}
 void Train::addCar(bool light) {
   Car* newCar = new Car;
   newCar->light = light;

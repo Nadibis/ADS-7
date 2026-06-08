@@ -52,7 +52,7 @@ int Train::getLength() {
     if (first->light == true) {
         memorizedLen = 0;
     } else {
-        return memorizedLen + 1;
+        return memorizedLen;
       }
     }
   }
